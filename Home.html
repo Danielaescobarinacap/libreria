@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+    <meta name="keywords" content="ribo, music, newmetal" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/styles2.css">
+    <link rel="stylesheet" href="./asset/ICONO/css/icon-menu.css">
+    <title>EL GRAN POETA</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Lobster&family=Oswald:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+        <div class="btn-menu" id="categoria">
+            <label for="btn-menu" class="icon-menu" id="categoria"></label>
+        </div>
+        <div class="redes">
+            <button class="btn-item" id="masvistos" formtarget="query">Los mas buscados</button>
+            <button class="btn-item" id="misfavoritos" formtarget="query">Mis favoritos</button>
+        </div>
+        <div class="navbar">
+            <h1 class="titulo-p">El Gran Poeta</h1>
+        </div>
+    </header>
+
+    <input type="checkbox" id="btn-menu">
+    <div class="header-menu">
+        <div class="head-menu">
+            <ul id="categories_list"></ul>
+            <label for="btn-menu" class="icon-cancel-circled"></label>
+        </div>
+    </div> 
+    <div class="contenedor" id="contenedor"></div>
+    <div class="detalle" id="popup">
+        <span class="close-btn" onclick="cerrarPopup()">&times;</span>
+        <span>Titulo: </span><h2 id="titulo"></h2> </br>
+        <span>Autor: </span><p id="autor"></p></br>
+        <span>Sinopsis: </span><p id="sinopsis"></p></br>
+        <span>Link Descarga: </span><p id="descarga"></p></br>
+        <span>Año publicación: </span><p id="publicacion"></p></br>
+        <span>Editorial: </span><p id="editorial"></p></br>
+    </div>
+    
+    
+    <script src="./script/LIBROS.JS" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+</body>
+</html>
