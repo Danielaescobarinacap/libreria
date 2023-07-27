@@ -118,51 +118,51 @@ $(document).ready(function() {
         // Obtener la lista de favoritos almacenada en las cookies
         const favoritos = obtenerFavoritosDeLocalStorage();
     
-        // Si no hay favoritos, muestra un mensaje o realiza alguna acción
+      
         if (favoritos.length === 0) {
             alert("No tienes libros marcados como favoritos.");
             return;
         }
     
-        // Llamar a la función busqueda() con el parámetro 'favoritos' para mostrar solo los favoritos
+        
         obtenerDetalleLibro('favoritos');
     });
 
 
     function guardarFavoritoEnLocalStorage(libroId) {
-        // Obtener la lista de favoritos almacenada en las cookies (si existe)
+        
         let favoritos = obtenerFavoritosDeLocalStorage();
     
-        // Verificar si el libro ya está en la lista de favoritos
+        
         if (favoritos.includes(libroId)) {
             alert("El libro ya está en la lista de favoritos.");
             return;
         }
     
-        // Agregar el libro a la lista de favoritos
+       
         favoritos.push(libroId);
     
-        // Guardar la lista de favoritos actualizada en las cookies
+        
         guardarFavoritosEnLocalStorage(favoritos);
     
-        // Marcar el botón "Favorito" como seleccionado (añadir la clase "favorito")
+      
         $(`.btn-fav[data-id="${libroId}"]`).addClass('favorito');
     }
     
     function eliminarFavoritoDeLocalStorage(libroId) {
-        // Obtener la lista de favoritos almacenada en las cookies (si existe)
+        
         let favoritos = obtenerFavoritosDeLocalStorage();
     
-        // Verificar si el libro está en la lista de favoritos
+        
         const index = favoritos.indexOf(libroId);
         if (index !== -1) {
-            // Eliminar el libro de la lista de favoritos
+            
             favoritos.splice(index, 1);
     
-            // Guardar la lista de favoritos actualizada en las cookies
+            
             guardarFavoritosEnLocalStorage(favoritos);
     
-            // Quitar la marca de "Favorito" del botón (remover la clase "favorito")
+            
             $(`.btn-fav[data-id="${libroId}"]`).removeClass('favorito');
         } else {
             alert("El libro no está en la lista de favoritos.");
